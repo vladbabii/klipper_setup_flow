@@ -45,6 +45,14 @@ enable_pin: ar38
 
 5. if anything fails, fix the issue (bad wiring, connector, 12/24 v power issues) then go to #1 and repeat
 
+## Stepper Directions
+1. add the force_move section to config file and restart
+```
+[force_move]
+enable_force_move: True
+```
+This will enable FORCE_MOVE and SET_KINEMATIC_POSITION commands
+
 ## Stepper Directions - carthesian, delta
 1. with the printer powered off, move each axis in the middle of it's travel so if you move it a couple of cm either way it won't hit anything
 2. we're going to use the force move command to move a stepper a couple mm
