@@ -36,6 +36,13 @@ STEPPER_BUZZ stepper=stepper_x
 STEPPER_BUZZ stepper=stepper_b
 ...
 ```
+
+If the stepper does not move at all and wiring looks ok, you can try changing the enable pin definition (add/remove a "!")
+```
+enable_pin: !ar38
+enable_pin: ar38
+```
+
 5. if anything fails, fix the issue (bad wiring, connector, 12/24 v power issues) then go to #1 and repeat
 
 ## Stepper Directions - carthesian, delta
@@ -54,8 +61,11 @@ reverse direction
 ```
 dir_pin: !ar55
 ```
+5. if any steppers move in incorrect direction then make changes and go to #1 again
 
 ## Stepper Directions - corexy
+
+...
 
 ## Confused about "correct" moving direction of the printhead ?
 
