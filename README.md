@@ -38,10 +38,26 @@ STEPPER_BUZZ stepper=stepper_b
 ```
 5. if anything fails, fix the issue (bad wiring, connector, 12/24 v power issues) then go to #1 and repeat
 
-## Stepper Directions
+## Stepper Directions - carthesian, delta
 1. with the printer powered off, move each axis in the middle of it's travel so if you move it a couple of cm either way it won't hit anything
-2. remember
+2. we're going to use the force move command to move a stepper a couple mm
+```
+FORCE_MOVE STEPPER=stepper_x DISTANCE=2
+FORCE_MOVE STEPPER=stepper_a DISTANCE=2
+```
+3. watch the direction of the printhead / axis
+4. if direction is not correct, find dir_pin and add/remove a ! in the pin definition
+```
+dir_pin: ar55
+```
+reverse direction
+```
+dir_pin: !ar55
+```
 
+## Stepper Directions - corexy
+
+## Confused about "correct" moving direction of the printhead ?
 
 If you're facing the front of the printer:
 ```
