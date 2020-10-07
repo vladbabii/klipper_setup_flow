@@ -1,5 +1,8 @@
 # Klipper Setup Flow
 
+*Important!*
+1. don't forget to backup your config
+
 ## Initial config
 1. copy config file or create a new one based on an existing one
 2. fix any errors until klipper starts up
@@ -22,3 +25,32 @@ or the reverse, of course
 6. fix any issues then go to #1 again
 
 now endstops should be running ok 
+
+## Steppers
+1. connect step sticks where needed
+2. while board is POWERED off, connect all steppers
+3. restart klipper
+4. use STEPPER_BUZZ to check stepper is moving like this
+```
+STEPPER_BUZZ stepper=stepper_x
+STEPPER_BUZZ stepper=stepper_b
+...
+```
+5. if anything fails, fix the issue (bad wiring, connector, 12/24 v power issues) then go to #1 and repeat
+
+## Stepper Directions
+1. with the printer powered off, move each axis in the middle of it's travel so if you move it a couple of cm either way it won't hit anything
+2. remember
+
+
+If you're facing the front of the printer:
+```
+-x is to the left
++x is to the right
+-y is toward you
++y is away from you
++z is the printhead going up or bed going down (distance increases)
+-z is the printhead going down or bed going up (disntance decreases)
+```
+
+
