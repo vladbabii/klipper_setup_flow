@@ -57,8 +57,8 @@ This will enable FORCE_MOVE and SET_KINEMATIC_POSITION commands
 1. with the printer powered off, move each axis in the middle of it's travel so if you move it a couple of cm either way it won't hit anything
 2. we're going to use the force move command to move a stepper a couple mm
 ```
-FORCE_MOVE STEPPER=stepper_x DISTANCE=2
-FORCE_MOVE STEPPER=stepper_a DISTANCE=2
+FORCE_MOVE STEPPER=stepper_x DISTANCE=2 VELOCITY=10
+FORCE_MOVE STEPPER=stepper_a DISTANCE=2 VELOCITY=10
 ```
 3. watch the direction of the printhead / axis
 4. if direction is not correct, find dir_pin and add/remove a ! in the pin definition
